@@ -1,4 +1,3 @@
-import 'package:flutter_firebase_example/resources/screen_values.dart';
 import 'package:flutter_firebase_example/ui/page/main_page.dart';
 import 'package:flutter_firebase_example/util/include.dart';
 
