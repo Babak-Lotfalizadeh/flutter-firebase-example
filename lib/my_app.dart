@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_example/config/secure.dart';
 import 'package:flutter_firebase_example/provider/theme_provider.dart';
-import 'package:flutter_firebase_example/ui/page/splash_page.dart';
+import 'package:flutter_firebase_example/services/navigation_service.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,8 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Firebase',
+      navigatorKey: Secure.systemNavigatorKey,
       theme: context.watch<ThemeProvider>().themeData,
-      home: const SplashPage(),
+      routes: NavigationService.routes,
+      initialRoute: NavigationService.initialRoute,
     );
   }
 }
