@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_example/ui/page/main_page.dart';
+import 'package:flutter_firebase_example/provider/theme_provider.dart';
+import 'package:flutter_firebase_example/ui/page/splash_page.dart';
+import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -7,11 +9,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MainPage(),
+      title: 'Flutter Firebase',
+      theme: context.watch<ThemeProvider>().themeData,
+      home: const SplashPage(),
     );
   }
 }
