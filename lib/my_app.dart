@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_firebase_example/config/secure.dart';
 import 'package:flutter_firebase_example/provider/theme_provider.dart';
-import 'package:flutter_firebase_example/services/navigation_service.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_firebase_example/util/include.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,7 +7,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Firebase',
+      onGenerateTitle: (BuildContext context) =>
+          AppLocalizations.of(context)?.appName ?? "Firebase",
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       scaffoldMessengerKey: Secure.snackBarKey,
       navigatorKey: Secure.systemNavigatorKey,
       theme: context.watch<ThemeProvider>().themeData,
