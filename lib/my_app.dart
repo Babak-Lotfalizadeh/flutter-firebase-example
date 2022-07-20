@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Firebase',
+      scaffoldMessengerKey: Secure.snackBarKey,
       navigatorKey: Secure.systemNavigatorKey,
       theme: context.watch<ThemeProvider>().themeData,
       routes: NavigationService.routes,
