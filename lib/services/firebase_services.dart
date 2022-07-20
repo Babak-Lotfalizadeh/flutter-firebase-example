@@ -20,5 +20,6 @@ class FirebaseServices {
 
   static Future<void> _initAnalytic() async {
     analytics = FirebaseAnalytics.instance;
+    analytics.logAppOpen();
   }
 }
