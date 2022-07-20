@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       onGenerateTitle: (BuildContext context) =>
           AppLocalizations.of(context)?.appName ?? "Firebase",
       localizationsDelegates: AppLocalizations.localizationsDelegates,
+      debugShowCheckedModeBanner: false,
       supportedLocales: AppLocalizations.supportedLocales,
       scaffoldMessengerKey: Secure.snackBarKey,
       navigatorKey: Secure.systemNavigatorKey,

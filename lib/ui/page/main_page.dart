@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_firebase_example/util/include.dart';
 
 class MainPage extends StatelessWidget {
   static const String id = "MainPage";
@@ -7,9 +7,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.blue,
-      ),
+      key: KeysEnum.splashPage.key,
     );
   }
 }
